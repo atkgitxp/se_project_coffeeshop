@@ -1,0 +1,65 @@
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.about {
+  background-color: #0a2850;
+  color: #fff;
+  overflow: hidden; /*hides any out of bounds elements -- circle*/
+  position: relative; /* absolute position of this relative parent element-- circle */
+}
+
+.about__title {
+  max-width: 251px;
+  margin: 100px 0 0 80px;
+  position: absolute;
+  z-index: 3;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.about__content {
+  padding: 119px 80px 173px 0;
+  max-width: 660px;
+  margin-left: auto; /*moved element furthest away from the left, flexbox not compatible*/
+  font-family: "Noto Serif";
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.about__paragraph {
+  margin: 0; /*reset default margin to apply middle child margin*/
+  right: 80px;
+}
+
+.about__paragraph:nth-child(2) {
+  margin: 20px 0; /* this worked*/
+}
+
+.about__circle {
+  width: 426px;
+  height: 426px;
+  border-radius: 50%;
+  background-color: #1878dc;
+  z-index: 1;
+  top: -152px;
+  left: -129px;
+  position: absolute;
+}
+.about__circle_animation_blurred {
+  z-index: 2;
+  animation: pulsate 1.3s ease-in-out infinite;
+  /* name, duration, timing-function, delay, iteration-count, direction, fill-mode, play state,*/
+}

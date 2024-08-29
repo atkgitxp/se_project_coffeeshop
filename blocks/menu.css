@@ -1,0 +1,73 @@
+.menu {
+  background-color: #fff;
+  background-image: url(../images/background_menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0; /* to do: margin around the cards-- complete*/
+}
+
+.menu__title {
+  max-width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.menu__subtitle {
+  max-width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  font-family: "Noto Serif";
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.menu__cards {
+  margin: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 0;
+}
+
+.card {
+  width: 540px;
+  list-style-type: none;
+}
+
+.card__title {
+  /* display: block; */
+  margin: 0 0 32px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.card__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* no default margin on list items */
+.card__list-item {
+  margin: 16px 0; /*perfect*/
+  display: flex;
+  justify-content: space-between;
+  font-family: "Noto Serif";
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+
+.card__list-divider {
+  border-bottom: 1px solid black;
+  flex-grow: 1; /*with parent as a flex container, this grows the span element*/
+}
