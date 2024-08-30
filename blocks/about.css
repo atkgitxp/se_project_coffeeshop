@@ -23,29 +23,30 @@
 .about__title {
   max-width: 251px;
   margin: 100px 0 0 80px;
-  position: absolute;
-  z-index: 3;
   font-weight: 500;
   font-size: 44px;
   line-height: 52px;
+  position: relative; /*z index and position relative brought the title above the animation. z-index alone didn't*/
+  z-index: 3;
 }
 
 .about__content {
   padding: 119px 80px 173px 0;
   max-width: 660px;
   margin-left: auto; /*moved element furthest away from the left, flexbox not compatible*/
-  font-family: "Noto Serif";
+  font-family: "Noto Serif", "Times New Roman", serif;
   font-size: 20px;
   line-height: 30px;
 }
 
 .about__paragraph {
-  margin: 0; /*reset default margin to apply middle child margin*/
-  right: 80px;
+  position: static;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
-.about__paragraph:nth-child(2) {
-  margin: 20px 0; /* this worked*/
+.about__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .about__circle {
@@ -59,7 +60,7 @@
   position: absolute;
 }
 .about__circle_animation_blurred {
-  z-index: 2;
+  z-index: 1;
   animation: pulsate 1.3s ease-in-out infinite;
   /* name, duration, timing-function, delay, iteration-count, direction, fill-mode, play state,*/
 }
