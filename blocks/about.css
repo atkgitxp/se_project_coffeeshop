@@ -18,6 +18,7 @@
   color: #fff;
   overflow: hidden; /*hides any out of bounds elements -- circle*/
   position: relative; /* absolute position of this relative parent element-- circle */
+  display: flex;
 }
 
 .about__title {
@@ -40,7 +41,6 @@
 }
 
 .about__paragraph {
-  position: static;
   margin: 0;
   margin-bottom: 20px;
 }
